@@ -22,17 +22,3 @@ A chrome extension which will enable you to reach your favorite website quickly.
 7. You should see the logo on top-right corner of the browser. 
 
 8. Click on that. You are done.
-
-
-
-
-#CUSTOMIZE
-
-1. Open popup.html with any text editor.
-
-2. Customize the links, media and texts. 
-
-
-
-
-
