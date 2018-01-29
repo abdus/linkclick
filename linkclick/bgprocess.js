@@ -1,5 +1,5 @@
-let siteName1, siteName2, siteName3, siteName4, siteName5, siteName6, siteName7, siteName8, siteName9;
-let siteAddress1, siteAddress2, siteAddress3, siteAddress4, siteAddress5, siteAddress6, siteAddress7, siteAddress8, siteAddress9;
+let siteName1, siteName2, siteName3, siteName4, siteName5, siteName6, siteName7, siteName8, siteName9, siteName10;
+let siteAddress1, siteAddress2, siteAddress3, siteAddress4, siteAddress5, siteAddress6, siteAddress7, siteAddress8, siteAddress9, siteAddress10;
 
 function retriveData(){
     chrome.storage.sync.get('siteName1', function(data){
@@ -55,6 +55,12 @@ function retriveData(){
     });
     chrome.storage.sync.get('siteAddress9', function(data){
         document.getElementsByTagName('a')[8].href = data.siteAddress9;
+    });
+    chrome.storage.sync.get('siteName10', function(data){
+        document.getElementsByTagName('a')[9].innerHTML = data.siteName10;
+    });
+    chrome.storage.sync.get('siteAddress10', function(data){
+        document.getElementsByTagName('a')[9].href = data.siteAddress10;
     });
 }
 retriveData();

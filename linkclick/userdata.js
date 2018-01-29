@@ -1,7 +1,7 @@
 "use strict"
 
-let siteName1, siteName2, siteName3, siteName4, siteName5, siteName6, siteName7, siteName8, siteName9;
-let siteAddress1, siteAddress2, siteAddress3, siteAddress4, siteAddress5, siteAddress6, siteAddress7, siteAddress8, siteAddress9;
+let siteName1, siteName2, siteName3, siteName4, siteName5, siteName6, siteName7, siteName8, siteName9, siteName10;
+let siteAddress1, siteAddress2, siteAddress3, siteAddress4, siteAddress5, siteAddress6, siteAddress7, siteAddress8, siteAddress9, siteAddress10;
 
 
 /*   Invoke Function  */
@@ -64,12 +64,18 @@ function updateFields(){
     chrome.storage.sync.get('siteAddress9', function(data){
         document.getElementById('link9-url').value = data.siteAddress9;
     });
+    chrome.storage.sync.get('siteName10', function(data){
+        document.getElementById('link10-name').value = data.siteName10;
+    });
+    chrome.storage.sync.get('siteAddress10', function(data){
+        document.getElementById('link10-url').value = data.siteAddress10;
+    });
 }
 
 
 
-let name1, name2, name3, name4, name5, name6, name7, name8, name9;
-let url1, url2, url3, url4, url5, url6, url7, url8, url9;
+let name1, name2, name3, name4, name5, name6, name7, name8, name9, name10;
+let url1, url2, url3, url4, url5, url6, url7, url8, url9, url10;
 
 
 /*   DOM EVENT LISTENERS   */
@@ -114,4 +120,8 @@ function saveUserData(){
     chrome.storage.sync.set({'siteName9': name9});
     url9 = document.getElementById('link9-url').value;
     chrome.storage.sync.set({'siteAddress9': url9});
+    name10 = document.getElementById('link10-name').value;
+    chrome.storage.sync.set({'siteName10': name10});
+    url10 = document.getElementById('link10-url').value;
+    chrome.storage.sync.set({'siteAddress10': url10});
 }
